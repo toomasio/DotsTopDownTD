@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.Entities;
+using Unity.NetCode;
 
 namespace DotsTopDownTD.Network
 {
@@ -8,15 +9,9 @@ namespace DotsTopDownTD.Network
         private static World _clientWorld;
         private static World _serverWorld;
 
-        public static void DestroyLocalSimulationWorld()
+        public static void DestroyAllWorlds()
         {
-            foreach (var world in new List<World>(World.All))
-            {
-                if (world.Flags == WorldFlags.Game)
-                {
-                    world.Dispose();
-                }
-            }
+            World.DisposeAllWorlds();
         }
 
         public static void RegisterServerWorld(World world) => _serverWorld = world;

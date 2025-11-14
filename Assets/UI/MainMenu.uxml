@@ -1,0 +1,66 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="MainMenu.uss" />
+
+    <ui:VisualElement class="menu-container">
+        <ui:Label text="DOTS Top-Down Tower Defense" class="title" />
+
+        <ui:VisualElement class="button-group">
+
+            <!-- 1. Host Local (LAN only – no Relay) -->
+            <ui:Button text="Host Local (LAN)" 
+                       name="host-local-button" 
+                       class="menu-button" />
+
+            <!-- 2. Host + Relay (creates Relay allocation + join code) -->
+            <ui:Button text="Host + Relay" 
+                       name="host-relay-button" 
+                       class="menu-button" />
+
+            <!-- Relay allocation code display (only shown after Host + Relay) -->
+            <ui:VisualElement class="input-row" name="relay-code-row" style="display: none;">
+                <ui:Label text="Join Code:" class="input-label" />
+                <ui:TextField name="allocation-code-field" 
+                              class="input-field" 
+                              is-read-only="true" />
+                <ui:Button text="Copy" 
+                           name="copy-code-button" 
+                           class="small-button no-right-margin" />
+            </ui:VisualElement>
+
+            <!-- 3. Join via Relay -->
+            <ui:VisualElement class="input-row">
+                <ui:Label text="Relay Code:" class="input-label" />
+                <ui:TextField name="join-code-field" 
+                              placeholder-text="Enter 6-letter code..." 
+                              class="input-field no-right-margin" />
+            </ui:VisualElement>
+            <ui:Button text="Join via Relay" 
+                       name="join-relay-button" 
+                       class="menu-button" />
+
+            <!-- 4. Join via IP -->
+            <ui:VisualElement class="input-row">
+                <ui:Label text="Host IP:" class="input-label" />
+                <ui:TextField name="ip-field" 
+                              value="127.0.0.1" 
+                              class="input-field" />
+                <ui:Label text="Port:" class="input-label port" />
+                <ui:IntegerField name="port-field" 
+                                 value="7777" 
+                                 class="port-field no-right-margin" />
+            </ui:VisualElement>
+            <ui:Button text="Join via IP" 
+                       name="join-ip-button" 
+                       class="menu-button" />
+
+            <!-- Status -->
+            <ui:Label name="status-label" class="status-label" text="" />
+
+            <!-- Quit -->
+            <ui:Button text="Quit" 
+                       name="quit-button" 
+                       class="menu-button quit no-bottom-margin" />
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

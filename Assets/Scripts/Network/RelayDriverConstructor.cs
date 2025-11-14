@@ -25,7 +25,8 @@ namespace DotsTopDownTD.Network
 
         public void CreateServerDriver(World world, ref NetworkDriverStore driverStore, NetDebug netDebug)
         {
-            var settings = DefaultDriverBuilder.GetNetworkSettings();
+            var settings = DefaultDriverBuilder.GetNetworkSettings(); 
+            settings.WithRelayParameters(ref serverData);
             DefaultDriverBuilder.RegisterServerUdpDriver(world, ref driverStore, netDebug, settings);
         }
     }

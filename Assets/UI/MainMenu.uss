@@ -1,0 +1,109 @@
+/* MainMenu.uss – Zero warnings, fully compatible with Unity 6000.2 */
+
+.menu-container {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(20, 20, 30, 0.95);
+}
+
+.title {
+    font-size: 48px;
+    color: #00ffcc;
+    -unity-font-style: bold;
+    margin-bottom: 60px;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+.button-group {
+    flex-direction: column;
+    align-items: center;
+    min-width: 500px;
+}
+
+/* Replace gap + :last-child with explicit spacing class */
+.button-group > VisualElement,
+.button-group > Button,
+.button-group > Label {
+    margin-bottom: 15px;
+}
+
+/* Explicitly remove bottom margin from the very last element in the group */
+.button-group > .no-bottom-margin {
+    margin-bottom: 0;
+}
+
+.menu-button {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #1a1a2e;
+    color: #00ffcc;
+    border-radius: 8px;
+    -unity-text-align: middle-center;
+    border-color: #00ffcc;
+    border-width: 2px;
+}
+
+.menu-button:hover {
+    background-color: #16213e;
+    border-color: #00ffcc;
+}
+
+.menu-button.quit {
+    background-color: #2d1b1b;
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+.input-row {
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+}
+
+/* Replace gap + :last-child */
+.input-row > VisualElement,
+.input-row > Label,
+.input-row > TextField,
+.input-row > IntegerField,
+.input-row > Button {
+    margin-right: 10px;
+}
+
+.input-row > .no-right-margin {
+    margin-right: 0;
+}
+
+.input-label {
+    width: 120px;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+.port {
+    width: 50px;
+}
+
+.input-field {
+    flex-grow: 1;
+    background-color: #16213e;
+    color: white;
+}
+
+.port-field {
+    width: 80px;
+}
+
+.small-button {
+    width: 60px;
+    height: 36px;
+    font-size: 14px;
+}
+
+.status-label {
+    min-height: 30px;
+    color: #ffcc00;
+    font-size: 18px;
+    margin-top: 20px;
+}
