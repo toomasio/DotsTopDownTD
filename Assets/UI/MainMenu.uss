@@ -1,5 +1,3 @@
-/* MainMenu.uss – Zero warnings, fully compatible with Unity 6000.2 */
-
 .menu-container {
     flex-grow: 1;
     justify-content: center;
@@ -9,10 +7,10 @@
 
 .title {
     font-size: 48px;
-    color: #00ffcc;
+    color: rgb(0, 255, 204);
     -unity-font-style: bold;
     margin-bottom: 60px;
-    text-shadow: 0 0 10px #00ffcc;
+    text-shadow: 0 0 10px rgb(0, 255, 204);
 }
 
 .button-group {
@@ -21,14 +19,18 @@
     min-width: 500px;
 }
 
-/* Replace gap + :last-child with explicit spacing class */
-.button-group > VisualElement,
-.button-group > Button,
+.button-group > VisualElement {
+    margin-bottom: 15px;
+}
+
+.button-group > Button {
+    margin-bottom: 15px;
+}
+
 .button-group > Label {
     margin-bottom: 15px;
 }
 
-/* Explicitly remove bottom margin from the very last element in the group */
 .button-group > .no-bottom-margin {
     margin-bottom: 0;
 }
@@ -37,23 +39,23 @@
     width: 300px;
     height: 50px;
     font-size: 20px;
-    background-color: #1a1a2e;
-    color: #00ffcc;
+    background-color: rgb(26, 26, 46);
+    color: rgb(0, 255, 204);
     border-radius: 8px;
     -unity-text-align: middle-center;
-    border-color: #00ffcc;
+    border-color: rgb(0, 255, 204);
     border-width: 2px;
 }
 
 .menu-button:hover {
-    background-color: #16213e;
-    border-color: #00ffcc;
+    background-color: rgb(22, 33, 62);
+    border-color: rgb(0, 255, 204);
 }
 
 .menu-button.quit {
-    background-color: #2d1b1b;
-    border-color: #ff4d4d;
-    color: #ff4d4d;
+    background-color: rgb(45, 27, 27);
+    border-color: rgb(255, 77, 77);
+    color: rgb(255, 77, 77);
 }
 
 .input-row {
@@ -62,13 +64,29 @@
     width: 500px;
 }
 
-/* Replace gap + :last-child */
-.input-row > VisualElement,
-.input-row > Label,
-.input-row > TextField,
-.input-row > IntegerField,
+.input-row > VisualElement {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.input-row > Label {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.input-row > TextField {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.input-row > IntegerField {
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
 .input-row > Button {
     margin-right: 10px;
+    color: rgb(255, 255, 255);
 }
 
 .input-row > .no-right-margin {
@@ -77,7 +95,7 @@
 
 .input-label {
     width: 120px;
-    color: #cccccc;
+    color: rgb(204, 204, 204);
     font-size: 16px;
 }
 
@@ -87,12 +105,13 @@
 
 .input-field {
     flex-grow: 1;
-    background-color: #16213e;
-    color: white;
+    background-color: rgb(22, 33, 62);
+    color: rgb(0, 0, 0);
 }
 
 .port-field {
     width: 80px;
+    color: rgb(0, 0, 0);
 }
 
 .small-button {
@@ -103,7 +122,7 @@
 
 .status-label {
     min-height: 30px;
-    color: #ffcc00;
+    color: rgb(255, 204, 0);
     font-size: 18px;
     margin-top: 20px;
 }

@@ -30,7 +30,7 @@ namespace DotsTopDownTD.Network
                 Allocation allocation = await RelayService.Instance.CreateAllocationAsync(maxConnections);
                 string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
-                // Built-in Unity extension — clean and official
+                // Built-in Unity extension â€” clean and official
                 var relayServerData = AllocationUtils.ToRelayServerData(allocation, "dtls");
 
                 Debug.Log($"[RELAY HOST] Join Code: <color=cyan><b>{joinCode}</b></color>");
@@ -118,7 +118,7 @@ namespace DotsTopDownTD.Network
             WorldUtilities.RegisterServerWorld(serverWorld);
             WorldUtilities.RegisterClientWorld(clientWorld);
 
-            Debug.Log("[RELAY HOST] Client/Host ready — Local player connected");
+            Debug.Log("[RELAY HOST] Client/Host ready â€” Local player connected");
         }
 
         private static void SetupRelayClient(RelayServerData relayClientData)
